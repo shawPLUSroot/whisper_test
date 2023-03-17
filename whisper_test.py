@@ -15,7 +15,7 @@ _, probs = model.detect_language(mel)
 print(f"Detected language: {max(probs, key=probs.get)}")
 
 # decode the audio
-options = whisper.DecodingOptions(fp16 = False)
+options = whisper.DecodingOptions()
 result = whisper.decode(model, mel, options)
 end = time.time()
 print(f'Cost {end-start}ms')
