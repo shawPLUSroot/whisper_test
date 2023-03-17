@@ -1,4 +1,5 @@
 import time
+import whisper
 start = time.time()
 model = whisper.load_model("large")
 
